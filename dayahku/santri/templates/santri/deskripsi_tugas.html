@@ -1,0 +1,36 @@
+{% extends 'santri/template_deskripsi.html' %}\
+{% load static %}
+
+{% block page_title %}Dayahku| Materi {% endblock page_title %}
+
+{% block button_materi %}
+<li class="nav-item"><a href="/materi" class="nav-link active" style="background-color:#8566F9"  aria-current="page">Materi</a></li>
+{% endblock button_materi %}
+
+{% block button_tugas %}
+<li class="nav-item"><a href="/tugas" class="nav-link ">Tugas</a></li>
+{% endblock button_tugas %}
+{%block konten%} 
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+        <img src="{% static 'img/task.png' %}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+        
+        <div class="d-flex gap-2 w-100 justify-content-between">
+          <div>
+            <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >Tugass</h6>
+            <p class="mb-0 opacity-75 d-flex gap-2 w-100 justify-content-between"> </p>
+          </div>
+        </div>
+    </a><br>
+
+    <form class="needs-validation">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+        <div class="invalid-feedback">Example invalid custom file feedback</div>
+        </div>
+    </form>
+
+
+</div>
+{%endblock konten%}

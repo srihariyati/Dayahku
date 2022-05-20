@@ -22,3 +22,12 @@ def loginView(request):
 
 def kelas(request):
     return render(request, 'ustad/kelas.html')
+
+def materi(request):
+    return render(request, 'ustad/materi.html')
+
+def tugas(request):
+    return render(request, 'ustad/tugas.html')
+
+def siswa(request):
+    return render(request, 'ustad/siswa.html')

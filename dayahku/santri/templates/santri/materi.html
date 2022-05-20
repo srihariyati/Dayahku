@@ -14,5 +14,20 @@
 
 {%block konten%} 
     <h1 style="color: #FFBF59; font-family:Lobster"></h1>
-    <p style="color: white" >Disini materi</p>  
+    <p style="color: #8566F9" >Daftar Materi</p>  <br>
+
+    {% comment %} Card Tugas {% endcomment %}
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="{% static 'img/task.png' %}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >List group item heading</h6>
+                <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+              </div>
+              <small class="opacity-50 text-nowrap" style="color:red">Deadline : 21 Mei 2022</small>
+            </div>
+          </a>
+    </div>
 {%endblock konten%}

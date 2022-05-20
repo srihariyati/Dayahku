@@ -25,3 +25,6 @@ def materi(request):
 
 def tugas(request):
     return render(request,'santri/tugas.html')
+
+def deskTugas(request):
+    return render(request, 'santri/deskripsi_tugas.html')
