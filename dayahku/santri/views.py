@@ -1,8 +1,23 @@
 #views app santri
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 
-# Create your views here.
-def login(request):
+def loginView(request):
+    if request.method == "POST":
+        print(request.POST)
+        username_login = request.POST['username']
+        password_login = request.POST['password']
+        
+        user = authenticate(request, username=username_login, password=password_login)
+        print(user)
+
+        if user is not None:
+           login(request, user)
+           return redirect('/materi')
+        else:
+            return redirect('/')
+       
+
     return render(request,'santri/login.html')
 
 def materi(request):

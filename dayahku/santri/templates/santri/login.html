@@ -5,48 +5,50 @@
 {% block konten %}      
         <div class="col-md-6">
           <div class="h-100 p-5 rounded-3">
-                    <div class="h-100 p-5 rounded-3">
-                        <form>
-                            <span class="login100-form-title">
-                              Selamat Datang!
-                            </span>
+            <div class="h-100 p-5 rounded-3">
+              <span class="login100-form-title">
+                Selamat Datang!
+              </span>
     
-                            <div class="text-center p-b-30">
-                                <span class="txt3">
-                                    di Website Setoran Hafalan Santri <br>
-                                    <a href="materi/">masuk dashboard</a>
-                                </span>
-                            </div>
+              <div class="text-center p-b-30">
+                <span class="txt3">
+                  di Website Setoran Hafalan Santri <br>
+                  <a href="materi/">masuk dashboard</a>
+                </span>
+              </div>
     
-                            <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist" >
-                                <li class="nav-item" role="presentation" >
-                                  <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="/" role="tab"
-                                    aria-controls="pills-login" aria-selected="true" style="background-color:#8566F9">Santri</a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                  <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="loginUstad/" role="tab"
-                                    aria-controls="pills-register" aria-selected="false">Ustad</a>
-                                </li>
-                              </ul>
-                              <!-- Pills navs -->
+              <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist" >
+                <li class="nav-item" role="presentation" >
+                  <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="/" role="tab"
+                  aria-controls="pills-login" aria-selected="true" style="background-color:#8566F9">Santri</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="loginUstad/" role="tab"
+                  aria-controls="pills-register" aria-selected="false">Ustad</a>
+                </li>
+              </ul>
+              
+              {% comment %} form login {% endcomment %}
+              <form method="POST" >
+                {% csrf_token %}
+                <div class="wrap-input100 validate-input">
+                  <input class="input100" type="text" name="username" id="username">
+                  <span class="focus-input100"></span>
+                  <span class="label-input100">Username</span>
+                </div>
                             
-                            
-                            <div class="wrap-input100 validate-input">
-                                <input class="input100" type="text" name="username">
-                                <span class="focus-input100"></span>
-                                <span class="label-input100">Username</span>
-                            </div>
-                            
-                            
-                            <div class="wrap-input100 validate-input" data-validate="Password is required">
-                                <input class="input100" type="password" name="pass">
-                                <span class="focus-input100"></span>
-                                <span class="label-input100">Password</span>
-                            </div>                
+                <div class="wrap-input100 validate-input" data-validate="Password is required">
+                  <input class="input100" type="password" name="password" id="password">
+                  <span class="focus-input100"></span>
+                  <span class="label-input100">Password</span>
+                </div>                
         
-                            <div class="container-login100-form-btn" >
-                                <button class="login100-form-btn" style="background-color:#8566F9" >
-                                    Masuk
-                                </button>
-                            </div>
+                <div class="container-login100-form-btn" >
+                  <button type="submit" class="login100-form-btn" style="background-color:#8566F9" >
+                    Masuk
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
 {% endblock konten %}

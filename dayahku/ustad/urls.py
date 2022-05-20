@@ -1,10 +1,10 @@
 #urls di app ustad
 
 from django.urls import path
-from . import views
+from ustad import views
 
 urlpatterns =[
-    path('',views.login),
+    path('',views.loginView),
     path('kelas/',views.kelas),
 
 ]

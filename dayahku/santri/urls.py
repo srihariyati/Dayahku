@@ -1,10 +1,10 @@
 #urls di app santri
 
 from django.urls import path
-from . import views
+from santri import views
 
 urlpatterns =[
-    path('',views.login),
+    path('',views.loginView),
     path('materi/',views.materi),
     path('tugas/',views.tugas),
 ]
