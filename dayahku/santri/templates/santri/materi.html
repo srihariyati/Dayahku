@@ -1,4 +1,5 @@
 {%extends 'santri/template_main.html'%}
+{% load static %}
 {% block page_title %} Dayahku |Materi Santri{%endblock page_title %}
 
         
@@ -11,6 +12,7 @@
 <li class="nav-item"><a href="/tugas" class="nav-link ">Tugas</a></li>
 {% endblock button_tugas %}
 
-{%block konten%}
-<h3> User saat ini :{{ user.get_username }}</h3>
+{%block konten%} 
+    <h1 style="color: #FFBF59; font-family:Lobster"></h1>
+    <p style="color: white" >Disini materi</p>  
 {%endblock konten%}
