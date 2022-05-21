@@ -11,6 +11,7 @@ urlpatterns =[
     path('kelas/siswa/',views.siswa),
     path('kelas/tugas/tambahtugas',views.tambahtugas),
     path('kelas/materi/tambahmateri',views.tambahmateri),
+    path('kelas/siswa/tambahsiswa',views.tambahsiswa),
 
 
 ]

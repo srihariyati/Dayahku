@@ -12,24 +12,27 @@
         <span> Tambah Tugas</span><br>
 
       {% comment %} Card Tugas {% endcomment %}
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="form-outline mb-4 justify-content-between">
-                <input type="materi" id="form1" class="form-control" placeholder="Judul Tugas" />
-                {{form.judul_tugas}}
-                
+            <div class="form-outline mb-4 justify-content-between ">
+                <label class="d-flex justify-content-start" for="judul_tugas">Judul Tugas</label>
+                {{form.judul_tugas}}               
             </div>
         
             <div>
-                <textarea class="form-control" rows="5" id="deskripsi" placeholder="Deskripsi Tugas"></textarea>
+                <label class="d-flex justify-content-start" for="deskripsi_tugas">Deskripsi Tugas</label>
                 {{form.deskripsi_tugas}}
-            </div><br><br><br>
-            
-            
-            <input type="file" class="form-control" id="customFile" />
+            </div><br>
 
+            <div>
+                <label class="d-flex justify-content-start" for="batas_waktu">Batas Waktu</label>
+                {{form.batas_waktu}}
+            </div><br>            
             
-            <br><div>
+            <label class="d-flex justify-content-start" for="input_file">Input File</label>
+            {{form.input_file}}<br>  
+
+            <div>
             <button type="reset " class="btn btn-danger" ng-click="reset()">Reset</button>
             <button type="Submit" class="btn btn-primary" ng-click="vm.upload()" ng-disabled="!vm.file">Upload</button>
             </div>

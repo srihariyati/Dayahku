@@ -29,25 +29,18 @@
     <i class="fa fa-plus"></i> Tambah Tugas</button></a>
 </div><br>
 {% comment %} daftar tugas disini {% endcomment %}
+{% for daftar_tugas in daftar_tugas %}
+
 <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
   <img src="{% static 'img/task.png' %}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
   
   <div class="d-flex gap-2 w-100 justify-content-between">
     <div>
-      <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >Judul Tugas</h6>
-      <p class="mb-0 opacity-75 d-flex gap-2 w-100 justify-content-between">Deskripsi Tugas </p>
+      <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" > {{daftar_tugas.judul_tugas}}</h6>
+      <p class="mb-0 opacity-75 d-flex gap-2 w-100 justify-content-between">{{daftar_tugas.deskripsi_tugas}} </p>
     </div>
   </div>
-</a><br>
-<a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-  <img src="{% static 'img/task.png' %}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-  
-  <div class="d-flex gap-2 w-100 justify-content-between">
-    <div>
-      <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >Judul Tugas</h6>
-      <p class="mb-0 opacity-75 d-flex gap-2 w-100 justify-content-between">Deskripsi Tugas </p>
-    </div>
-  </div>
-</a><br>
+</a><br>		
+	{% endfor %}
 
 {%endblock konten%}

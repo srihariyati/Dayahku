@@ -18,15 +18,17 @@
 
     {% comment %} Card Tugas {% endcomment %}
     <div class="list-group">
+      {% for daftar_materi in daftar_materi %}
         <a href="/download_materi" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
             <img src="{% static 'img/bookmark.png' %}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
             
             <div class="d-flex gap-2 w-100 justify-content-between">
               <div>
-                <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >Sejarah Kebudayaan Islam</h6>
-                <p class="mb-0 opacity-75 d-flex gap-2 w-100 justify-content-between">Peninggalan Bani Umayyah</p>
+                <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >{{daftar_materi.judul_materi}}</h6>
+                <p class="mb-0 opacity-75 d-flex gap-2 w-100 justify-content-between">{{daftar_materi.input_file}}</p>
               </div>
             </div>
-          </a>
+          </a><br>
+          {% endfor %}
     </div>
 {%endblock konten%}

@@ -1,26 +1,21 @@
 from django.db import models
-
 # Create your models here.
+
 from django.db import models
 
-# Create your models here.
-
-class PostModel(models.Model):
-	judul		= models.CharField(max_length = 100)
-	body		= models.TextField()
-	author		= models.CharField(max_length = 100)
-	
-	LIST_CATEGORY = (
-		('Jurnal','jurnal'),
-		('Berita','berita'),
-		('Gosip','gosip'),
-		)
-
-	category	= models.CharField(
-		max_length = 100,
-		choices = LIST_CATEGORY,
-		default = 'jurnal',
-		)
+class Tugas(models.Model):
+	judul_tugas = models.CharField('Judul Tugas', max_length=50)
+	deskripsi_tugas = models.CharField('Deskripsi Tugas', max_length =100)
+	batas_waktu = models.DateField("Batas Waktu")
+	input_file = models.FileField('File')
 
 	def __str__(self):
-		return "{}.{}".format(self.id,self.judul)
+		return self.judul_tugas
+
+class Materi(models.Model):
+	judul_materi = models.CharField('Judul Matri', max_length=50)
+	deskripsi_materi = models.CharField('Deskripsi Materi', max_length =100)
+	input_file = models.FileField('File')
+
+	def __str__(self):
+    		return self.judul_materi

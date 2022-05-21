@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'dayahku.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'dayahku',
+        'NAME': 'uas_dayahku',
         'ENFORCE_SCHEMA': False,
     }
 }

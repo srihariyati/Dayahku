@@ -16,16 +16,18 @@
 
     {% comment %} Card Tugas {% endcomment %}
     <div class="list-group">
-        <a href="/deskripsitugas" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+      {% for daftar_tugas in daftar_tugas %}
+        <a href="/deskripsitugas/{{daftar_tugas.id}}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
             <img src="{% static 'img/task.png' %}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
             
             <div class="d-flex gap-2 w-100 justify-content-between">
               <div>
-                <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >Al-Quran Hadist</h6>
-                <p class="mb-0 opacity-75 d-flex gap-2 w-100  ustify-content-between">Tuliskan macam-macam mad beserta contohnya!</p>
+                <h6 class="mb-0 d-flex gap-2 w-100 justify-content-between" >{{daftar_tugas.judul_tugas}}</h6>
+                <p class="mb-0 opacity-75 d-flex gap-2 w-100  ustify-content-between">{{daftar_tugas.input_file}}</p>
               </div>
-              <small class="opacity-50" style="color:red">Deadline : 21 Mei 2022</small>
+              <small class="opacity-50" style="color:red">Batas Waktu : {{daftar_tugas.batas_waktu}}</small>
             </div>
-          </a>
+          </a><br>
+          {% endfor %}
     </div>
 {%endblock konten%}

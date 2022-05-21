@@ -11,21 +11,31 @@
 
     {% comment %} Card Tugas {% endcomment %}
     <div class="list-group">
-      <span> Tambah Materi</span><br>
+      <span> Tambah Siswa</span><br>
     </div>
     <form method="POST" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="form-outline mb-4">
-          <label class="d-flex justify-content-start" for="judul_materi">Judul Materi</label>
-          {{form.judul_materi}}
+          <label class="d-flex justify-content-start" for="nama_siswa">Nama Siswa</label>
+          <input class="form-control">
       </div>
       <div>
-          <label class="d-flex justify-content-start" for="deskripsi_materi">Deskripsi Tugas</label>
-          {{form.deskripsi_materi}}
+          <label class="d-flex justify-content-start" for="username_siswa">Username Siswa</label>
+          <input class="form-control">
       </div><br>
 
-      <label class="d-flex justify-content-start" for="input_file">Input File</label>
-      {{form.input_file}}<br>
+      <div>
+        <label class="d-flex justify-content-start" for="email_siswa">Email Siswa</label>
+        <input class="form-control">
+    </div><br>
+    <div>
+      <label class="d-flex justify-content-start" for="password">Password</label>
+      <input class="form-control">
+  </div><br>
+  <div>
+    <label class="d-flex justify-content-start" for="konfir_pass">Konfirmasi Password</label>
+    <input class="form-control">
+</div><br>
       
       <div>
         <button type="reset " class="btn btn-danger" ng-click="reset()">Reset</button>
