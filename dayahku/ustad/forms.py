@@ -1,11 +1,44 @@
 from django import forms
 
+from .models import PostModel
+
 class PostForm(forms.Form):
-    judul   = forms.CharField(max_length=30)
-    deskripsi = forms.CharField(
-        widget = forms.Textarea
-    )
-    file = forms.FileField(
-        label = 'Pilih File',
-        help_text='File maksimal 2MB'
-    )
+    class Meta:
+        model = PostModel
+        fields = [
+			'author',
+			'judul',
+			'body',
+			'category',
+		]
+        
+        labels = {
+			'author':'Penulis',
+		}
+        
+        widgets = {
+			'judul': forms.TextInput(
+				attrs = {
+					'class':'form-control',
+					'placeholder':'isi dengan judul artikel',}
+				),
+
+			'author': forms.TextInput(
+				attrs = {
+					'class':'form-control',
+					'placeholder':'nama penulis',}
+				),
+
+
+			'body': forms.Textarea(
+				attrs = {
+					'class':'form-control',}
+				),
+
+
+			'category': forms.Select(
+				attrs = {
+					'class':'form-control',
+				}
+				),
+		}

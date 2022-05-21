@@ -38,14 +38,13 @@ def tambahmateri(request):
     return render(request, 'ustad/tambahmateri.html')
 
 def tambahtugas(request):
-    post_form = PostForm()
+    return render(request, 'ustad/tambahtugas.html')
 
-    if request.method =='POST':
-        print(request.POST)
+def storetugas(request):
+    post_form = PostForm()
 
     context={
         'post_form' : post_form
 
     }
     return render (request , 'ustad/tambahtugas.html', context)
-
