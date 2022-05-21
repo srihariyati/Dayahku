@@ -29,7 +29,7 @@ def materi(request):
 
 def tugas(request):
     return render(request, 'ustad/tugas.html')
-    
+
 
 def siswa(request):
     return render(request, 'ustad/siswa.html')
@@ -38,7 +38,14 @@ def tambahmateri(request):
     return render(request, 'ustad/tambahmateri.html')
 
 def tambahtugas(request):
-    return render(request, 'ustad/tambahtugas.html')
+    post_form = PostForm()
 
-def storetugas(request):
-    pass
+    if request.method =='POST':
+        print(request.POST)
+
+    context={
+        'post_form' : post_form
+
+    }
+    return render (request , 'ustad/tambahtugas.html', context)
+
