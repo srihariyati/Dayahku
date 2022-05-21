@@ -1,14 +1,16 @@
 {% extends 'ustad/template_main.html' %}\
 {% load static %}
 
-{% block page_title %}Dayahku|Input Materi{% endblock page_title %}
+{% block page_title %}Dayahku | Input Tugas{% endblock page_title %}
 
 {%block konten%} 
     <h1 style="color: #FFBF59; font-family:Lobster"></h1>
-    <li class="nav-item"><a href="/loginUstad/kelas/tugas" style="color:#8566F9"    aria-current="page">Tugas</a></li><br>
-
+    <ul class="nav nav-pills d-flex justify-content-start">
+      <li class="nav-item"><a href="/loginUstad/kelas/tugas"   style="color:#8566F9"  aria-current="page">Kembali</a></li>
+  </ul><br>
     {% comment %} Card Tugas {% endcomment %}
     <div class="list-group">
+      <span> Tambah Tugas</span><br>
     </div>
     <div class="form-outline mb-4">
         <input type="materi" id="form1" class="form-control" placeholder="Judul Tugas" />
