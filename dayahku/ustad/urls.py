@@ -9,5 +9,8 @@ urlpatterns =[
     path('kelas/materi/',views.materi),
     path('kelas/tugas/',views.tugas),
     path('kelas/siswa/',views.siswa),
+    path('kelas/tugas/tambahtugas',views.tambahtugas),
+    path('kelas/materi/tambahmateri',views.tambahmateri),
+
 
 ]

@@ -1,7 +1,6 @@
 {% extends 'ustad/template_deskripsi.html' %}\
 {% load static %}
-
-{% block page_title %}Dayahku| Materi {% endblock page_title %}
+{% block page_title %}Dayahku| Tugas {% endblock page_title %}
 
 {%block konten%} 
 <div class="list-group">
@@ -22,4 +21,14 @@
         <li class="nav-item"><a href="/loginUstad/kelas/siswa"  aria-current="page">Siswa</a></li>                     
     </ul>
 </div>
+<div>
+  <br>
+    <br>
+      <br>
+      <a class="btn btn-primary" href="/loginUstad/kelas/tugas/tambahtugas" role="button">Tambah</a>
+      </br>
+    </br>
+  </br>
+</div>
+
 {%endblock konten%}

@@ -1,0 +1,27 @@
+{% extends 'ustad/template_main.html' %}\
+{% load static %}
+
+{% block page_title %}Dayahku|Input Materi{% endblock page_title %}
+
+{%block konten%} 
+    <h1 style="color: #FFBF59; font-family:Lobster"></h1>
+    <li class="nav-item"><a href="/loginUstad/kelas/tugas" style="color:#8566F9"    aria-current="page">Tugas</a></li><br>
+
+    {% comment %} Card Tugas {% endcomment %}
+    <div class="list-group">
+    </div>
+    <div class="form-outline mb-4">
+        <input type="materi" id="form1" class="form-control" placeholder="Judul Tugas" />
+    </div>
+    <div><textarea class="form-control" rows="5" id="deskripsi" placeholder="Deskripsi Tugas"></textarea>
+    </div>
+    <br>
+    <input type="file" class="form-control" id="customFile" />
+    <div>
+      <br>
+      <br>
+      <button type="reset " class="btn btn-danger" ng-click="reset()">Reset</button>
+      <button type="button" class="btn btn-primary" ng-click="vm.upload()" ng-disabled="!vm.file">Upload</button>
+    </div>
+    
+{%endblock konten%}

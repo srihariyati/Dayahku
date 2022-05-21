@@ -31,3 +31,9 @@ def tugas(request):
 
 def siswa(request):
     return render(request, 'ustad/siswa.html')
+
+def tambahmateri(request):
+    return render(request, 'ustad/tambahmateri.html')
+
+def tambahtugas(request):
+    return render(request, 'ustad/tambahtugas.html')
