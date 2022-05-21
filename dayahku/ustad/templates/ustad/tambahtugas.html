@@ -8,22 +8,29 @@
     <ul class="nav nav-pills d-flex justify-content-start">
       <li class="nav-item"><a href="/loginUstad/kelas/tugas"   style="color:#8566F9"  aria-current="page">Kembali</a></li>
   </ul><br>
-    {% comment %} Card Tugas {% endcomment %}
+
+    
     <div class="list-group">
-      <span> Tambah Tugas</span><br>
+        <span> Tambah Tugas</span><br>
+
+      {% comment %} Card Tugas {% endcomment %}
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-outline mb-4">
+                <input type="materi" id="form1" class="form-control" placeholder="Judul Tugas" />
+            </div>
+        
+            <div><textarea class="form-control" rows="5" id="deskripsi" placeholder="Deskripsi Tugas"></textarea>
+            </div><br><br><br>
+        
+            <input type="file" class="form-control" id="customFile" />
+            <div>
+            <button type="reset " class="btn btn-danger" ng-click="reset()">Reset</button>
+            <button type="Submit" class="btn btn-primary" ng-click="vm.upload()" ng-disabled="!vm.file">Upload</button>
+            </div>
+        </form>
     </div>
-    <div class="form-outline mb-4">
-        <input type="materi" id="form1" class="form-control" placeholder="Judul Tugas" />
-    </div>
-    <div><textarea class="form-control" rows="5" id="deskripsi" placeholder="Deskripsi Tugas"></textarea>
-    </div>
-    <br>
-    <input type="file" class="form-control" id="customFile" />
-    <div>
-      <br>
-      <br>
-      <button type="reset " class="btn btn-danger" ng-click="reset()">Reset</button>
-      <button type="button" class="btn btn-primary" ng-click="vm.upload()" ng-disabled="!vm.file">Upload</button>
-    </div>
+
+    
     
 {%endblock konten%}

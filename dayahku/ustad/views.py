@@ -1,6 +1,7 @@
 #vies app ustad
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
+from .forms import PostForm
 
 # Create your views here.
 def loginView(request):
@@ -28,6 +29,7 @@ def materi(request):
 
 def tugas(request):
     return render(request, 'ustad/tugas.html')
+    
 
 def siswa(request):
     return render(request, 'ustad/siswa.html')
@@ -37,3 +39,6 @@ def tambahmateri(request):
 
 def tambahtugas(request):
     return render(request, 'ustad/tambahtugas.html')
+
+def storetugas(request):
+    pass
