@@ -16,6 +16,7 @@ urlpatterns = [
     path('tambahmateri/',include('ustad.urls')),
 
     path('materi/', include('santri.urls')),
+    path('download_materi/', include('santri.urls')),
     path('tugas/', include('santri.urls')),
     path('deskripsitugas/',include('santri.urls')),
     
