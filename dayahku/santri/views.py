@@ -28,3 +28,6 @@ def tugas(request):
 
 def deskTugas(request):
     return render(request, 'santri/deskripsi_tugas.html')
+
+def download_materi(request):
+    return render(request, 'santri/download_materi.html')

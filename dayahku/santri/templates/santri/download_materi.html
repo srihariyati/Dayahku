@@ -14,7 +14,9 @@
 
 {%block konten%} 
     <h1 style="color: #FFBF59; font-family:Lobster"></h1>
-    <p style="color: #8566F9" >Daftar Materi</p>  <br>
+    <ul class="nav nav-pills d-flex justify-content-start">
+    <li class="nav-item"><a href="materi/" style="color:#8566F9" aria-current="page">Kembali</a></li>                    
+    </ul><br>
 
     {% comment %} Card Tugas {% endcomment %}
     <div class="list-group">
@@ -28,5 +30,7 @@
               </div>
             </div>
           </a>
+    </div><br><br>
+    <div><button class="btn btn-primary" style="width:100%"><i class="fa fa-download"></i> Download</button>
     </div>
 {%endblock konten%}
